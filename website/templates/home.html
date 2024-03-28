@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<main>
+    <h1>Tadwadii</h1>
+    <p class="app-description">Tadawii aims to help people and increase awareness about their healthcare and health status. This is mainly done by saving the data of the user, which specialists can retrieve.</p>
+    <p class="signin">Please if you do not have an account please sign up</p>
+</main>
+
+<style>
+    main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .app-description {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .signin {
+            color: #007bff;
+            text-decoration: none;
+        }
+</style>
+{% endblock %}
