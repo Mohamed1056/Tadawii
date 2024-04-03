@@ -1,6 +1,60 @@
-{% extends "base.html" %}
-
-{% block title %}Sign-Up{% endblock %}
-
-{% block content %}
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+    
+        .signup-form {
+            text-align: center;
+        }
+    
+        .user-type {
+            margin-bottom: 20px;
+        }
+    
+        .user-type img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .user-type img:hover {
+            transform: scale(1.1);
+        }
+    
+        .user-type-label {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-form">
+        <h2>Signup</h2>
+        <div class="user-type">
+            <a href="{{ url_for('auth.doctor_signUp') }}"><img src="{{ url_for('static', filename='imgs/doctor_img.jpeg') }}" alt="Doctor Icon"></a>
+            <a href="{{ url_for('auth.doctor_signUp') }}" class="user-type-label">Doctor</a>
+        </div>
+        <div class="user-type">
+            <a href="{{ url_for('auth.patient_signUp') }}"><img src="{{ url_for('static', filename='imgs/patient_img.avif') }}" alt="Patient Icon"></a>
+            <a href="{{ url_for('auth.patient_signUp') }}" class="user-type-label">Patient</a>
+        </div>
+    </div>
+</body>
+</html>

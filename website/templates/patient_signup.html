@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Registration</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+<h1>Patient Registration</h1>
+<form action="/submit_patient_data" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="blood_type">Blood Type:</label>
+    <input type="text" id="blood_type" name="blood_type">
+
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" name="weight">
+
+    <label for="height">Height (cm):</label>
+    <input type="number" id="height" name="height">
+
+    <label for="contact_phone">Contact Phone:</label>
+    <input type="tel" id="contact_phone" name="contact_phone" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address"></textarea>
+
+    <label for="emergency_contact">Emergency Contact:</label>
+    <input type="text" id="emergency_contact" name="emergency_contact">
+
+    <label for="medical_history">Medical History:</label>
+    <textarea id="medical_history" name="medical_history"></textarea>
+
+    <label for="medications">Current Medications:</label>
+    <textarea id="medications" name="medications"></textarea>
+
+    <label for="allergies">Allergies:</label>
+    <textarea id="allergies" name="allergies"></textarea>
+
+    <label for="chronic_diseases">Chronic Diseases:</label>
+    <textarea id="chronic_diseases" name="chronic_diseases"></textarea>
+
+    <label for="family_history">Family Medical History:</label>
+    <textarea id="family_history" name="family_history"></textarea>
+
+    <label for="smoking">Smoking (Yes/No):</label>
+    <input type="text" id="smoking" name="smoking">
+
+    <label for="alcohol_consumption">Alcohol Consumption (Yes/No):</label>
+    <input type="text" id="alcohol_consumption" name="alcohol_consumption">
+
+    <label for="dietary_preferences">Dietary Preferences:</label>
+    <textarea id="dietary_preferences" name="dietary_preferences"></textarea>
+
+    <label for="exercise_habits">Exercise Habits:</label>
+    <textarea id="exercise_habits" name="exercise_habits"></textarea>
+
+    <label for="primary_care_physician">Primary Care Physician:</label>
+    <input type="text" id="primary_care_physician" name="primary_care_physician">
+
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
